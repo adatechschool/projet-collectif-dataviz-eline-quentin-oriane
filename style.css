@@ -1,0 +1,49 @@
+#flipCard {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.cardZone {
+    width: 200px;
+    height: 100px;
+    perspective: 1000px;
+    position: relative;
+    width: 60px;
+    height: 100px;
+    text-align: center;
+    transition: transform 10s;
+    transform-style: preserve-3d;
+}
+
+.cardZone :hover  {
+    transform: rotateY(180deg);
+}
+
+.borderDemoFront, .borderDemoBack {
+    position: relative;   
+    margin: 50px;
+    width: 60px;
+    height: 100px;
+    color: #00ff37;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.borderDemoFront {
+    background-color: #1C6EA4;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+.borderDemoBack {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+     background-color: #ff0000;
+    transform: rotateY(180deg);
+}
+
+
+
+
