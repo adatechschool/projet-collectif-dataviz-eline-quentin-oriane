@@ -9,18 +9,27 @@ getInfo().then(function (women) {
   let flipCard = document.getElementById("flipCard");
   let cardZone;
   let cardFront;
+  let imageFront;
   let cardBack;
   for (let i = 0; i < women.length; i++) {
+    // Creation de la div "cardZone"
     cardZone = document.createElement("div");
-    cardZone.className = "cardZone";
-    flipCard.appendChild(cardZone);
+    cardZone.id = "cardZone"; //On attribut un id
+    flipCard.appendChild(cardZone); //On dit que cardZone est l'enfant de flipCard
+    // Creation de la div "borderDemoFront"
     cardFront = document.createElement("div");
-    cardFront.className = "borderDemoFront";
-    cardFront.innerHTML = women[i].name;
-    cardZone.appendChild(cardFront);
+    cardFront.id = "borderDemoFront"; //On attribut un id
+    cardFront.innerHTML = women[i].name; //On vient chercher les names dans l'API pour les rentrer dans le HTML
+    cardZone.appendChild(cardFront); //On dit que cardFront est l'enfant de cardZone
+    // Creation de la div "ImageFront"
+    imageFront = document.createElement("img");
+    imageFront.id = "imageFront"; //On attribut un id
+    imageFront.src = women[i].image_path; //On vient chercher les images dans l'API pour les rentrer dans le HTML SRC
+    cardFront.appendChild(imageFront); //On dit que imageFront est l'enfant de cardFront
+    // Creation de la div "borderDemoFront"
     cardBack = document.createElement("div");
-    cardBack.className = "borderDemoBack";
-    cardBack.innerHTML = women[i].details;
-    cardZone.appendChild(cardBack);
+    cardBack.id = "borderDemoBack"; //On attribut un id
+    cardBack.innerHTML = women[i].details; //On vient chercher les details dans l'API pour les rentrer dans le HTML
+    cardZone.appendChild(cardBack); //On dit que cardBack est l'enfant de cardZone
   }
 });
