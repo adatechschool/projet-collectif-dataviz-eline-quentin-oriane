@@ -14,7 +14,7 @@ getInfo().then(function (women) {
   for (let i = 0; i < women.length; i++) {
     // Creation de la div "cardZone"
     cardZone = document.createElement("div");
-    cardZone.id = "cardZone"; //On attribut un id
+    cardZone.id = "cardZone"; //On attribut un id !!! pensez à nommer les id en fonction de l'index pour n'avoir que des id uniques !!! et garder les classes pour le CSS
     flipCard.appendChild(cardZone); //On dit que cardZone est l'enfant de flipCard
     // Creation de la div "borderDemoFront"
     cardFront = document.createElement("div");
